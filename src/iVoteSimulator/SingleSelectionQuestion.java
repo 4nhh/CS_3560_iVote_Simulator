@@ -33,9 +33,9 @@ public class SingleSelectionQuestion extends Question {
 	public double checkAnswer(HashSet<String> studentAnswer) {
 		// Since only one solution is possible, we only need to check for equality.
 		if (this.getSolution().equals(studentAnswer)) { // If correct,
-			return this.getPointValue();				// full points!  :)
-		} else {										// If incorrect,
-			return 0.0;									// nothing.
+			return this.getPointValue();		// full points!  :)
+		} else {					// If incorrect,
+			return 0.0;				// nothing.
 		}
 	}
 }
