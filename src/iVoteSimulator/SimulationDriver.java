@@ -13,27 +13,31 @@ public class SimulationDriver {
 	 * @return LinkedHashSet of four pre-determined questions
 	 */
 	public static LinkedHashSet<Question> createQuestions() {
+		// Two multiple-selection questions. The total number of answers can be greater
+		// than the number of students.
 		Question q1 = new MultipleSelectionQuestion("Select all valid dog breeds.",
-				new LinkedHashSet<String>(
+						new LinkedHashSet<String>(
 						Arrays.asList("A. Shih Tzu", "B. Blue Heeler", "C. Abyssinian", "D. Maltese")),
-				new HashSet<String>(Arrays.asList("A", "B", "D")), 4.0);
+						new HashSet<String>(Arrays.asList("A", "B", "D")), 4.0);
 		Question q2 = new MultipleSelectionQuestion("Select the facts about dogs that are true.",
-				new LinkedHashSet<String>(Arrays.asList("A. Dogs regulate their temperature by panting.",
+						new LinkedHashSet<String>(Arrays.asList("A. Dogs regulate their temperature by panting.",
 						"B. One dog year is equivalent to 7 human years.", "C. Each dog's nose has a unique print.")),
-				new HashSet<String>(Arrays.asList("A", "C")), 5.0);
+						new HashSet<String>(Arrays.asList("A", "C")), 5.0);
+		// Two single-selection questions. The total number of selections is supposed to be
+		// exactly the same as the number of students.
 		Question q3 = new SingleSelectionQuestion("It is safe for dogs to consume grapes.",
-				new LinkedHashSet<String>(Arrays.asList("A. True", "B. False")),
-				new HashSet<String>(Arrays.asList("B")), 2.0);
+						new LinkedHashSet<String>(Arrays.asList("A. True", "B. False")),
+						new HashSet<String>(Arrays.asList("B")), 2.0);
 		Question q4 = new SingleSelectionQuestion("How many dog breeds are officially recognized?",
-				new LinkedHashSet<String>(Arrays.asList("A. 300", "B. 330", "C. 360", "D. 390")),
-				new HashSet<String>(Arrays.asList("C")), 2.0);
+						new LinkedHashSet<String>(Arrays.asList("A. 300", "B. 330", "C. 360", "D. 390")),
+						new HashSet<String>(Arrays.asList("C")), 2.0);
 		return new LinkedHashSet<Question>(Arrays.asList(q1, q2, q3, q4));
 	}
 
 	/**
 	 * Generates a random number of students (between 15 and 50) for use in testing
 	 * the voting simulator.
-	 * @return LinkedHashSet of 6 to 20 Student objects
+	 * @return LinkedHashSet of 15 to 50 Student objects
 	 */
 	public static HashSet<Student> generateStudents() {
 		Random rand = new Random();

@@ -22,7 +22,7 @@ public class Student {
 		/* I use the UUID utility to generate UIDs here because it's known for uniqueness.
 		 * While a collision is theoretically possible, the chance is apparently 1 in 2.71 x 10^{18}.
 		 * The UIDs will be displayed in SimulationDriver (via VotingService's printTopTen()),
-		 * though if this were an actual web application, it'd be preferrable to have a
+		 * though if this were an actual web application, it'd be preferrable to have aus
 		 * seperate field for human-readable student names.*/
 		UID = UUID.randomUUID().toString();
 		points = 0;
