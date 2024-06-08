@@ -57,8 +57,7 @@ public class SimulationDriver {
 	 * @param students  LinkedHashSet of participating Students.
 	 * @return LinkedHashSet of Students with valid submissions.
 	 */
-	public static void populateStudentAnswers(LinkedHashSet<Question> questions,
-				  							  HashSet<Student> students) {
+	public static void populateStudentAnswers(LinkedHashSet<Question> questions, HashSet<Student> students) {
 		HashSet<Student> studentsWithAns = students;
 		int i = 0;
 		for (Question q : questions) {
