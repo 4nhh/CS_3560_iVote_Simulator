@@ -14,7 +14,7 @@ public class Student {
 	private Map<Integer, HashSet<String>> submissions; 
 	/* The use of a HashSet for holding answers is due to uniqueness and access to set operations.
 	 * Critically, the key-value mechanism means that the student's resubmission for a question will
-	 * replace their old answer set, as intended. One question, one set of selected answers.*/
+	 * replace their old answer set, as intended. One question as key -> one HashSet of selected answers.*/
 	
 	/** Default constructor. Creates an empty Student object with null/default values. */
 	public Student() {
