@@ -35,9 +35,9 @@ public class SimulationDriver {
 	 * the voting simulator.
 	 * @return LinkedHashSet of 6 to 20 Student objects
 	 */
-	public static LinkedHashSet<Student> generateStudents() {
+	public static HashSet<Student> generateStudents() {
 		Random rand = new Random();
-		LinkedHashSet<Student> studentList = new LinkedHashSet<Student>();
+		HashSet<Student> studentList = new HashSet<Student>();
 		int numStudents = (rand.nextInt(36) + 15);
 		for (int i = 0; i < numStudents; i++) {
 			Student newStudent = new Student();
@@ -54,8 +54,8 @@ public class SimulationDriver {
 	 * @return LinkedHashSet of Students with valid submissions.
 	 */
 	public static void populateStudentAnswers(LinkedHashSet<Question> questions,
-				  							  LinkedHashSet<Student> students) {
-		LinkedHashSet<Student> studentsWithAns = students;
+				  							  HashSet<Student> students) {
+		HashSet<Student> studentsWithAns = students;
 		int i = 0;
 		for (Question q : questions) {
 			int options = q.getOptions().size();
@@ -83,7 +83,7 @@ public class SimulationDriver {
 
 	public static void main(String[] args) {
 		LinkedHashSet<Question> questions = createQuestions();
-		LinkedHashSet<Student> students = generateStudents();
+		HashSet<Student> students = generateStudents();
 		populateStudentAnswers(questions, students);
 		VotingService voteSim = new VotingService(questions, students);
 		voteSim.processQuestions();

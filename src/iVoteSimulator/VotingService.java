@@ -8,13 +8,13 @@ import java.util.*;
 public class VotingService {
 
 	private LinkedHashSet<Question> questionList;
-	private LinkedHashSet<Student> studentList;
+	private HashSet<Student> studentList;
 
 	/** Explicit constructor.
-	 * @param questions	 LinkedHashSet of questions to be answered
-	 * @param students	 LinkedHashSet of participating students
+	 * @param questions	 Questions to be answered
+	 * @param students	 Participating students
 	 */
-	public VotingService(LinkedHashSet<Question> questions, LinkedHashSet<Student> students) {
+	public VotingService(LinkedHashSet<Question> questions, HashSet<Student> students) {
 		this.setQuestions(questions);
 		this.setStudentList(students);
 	}
@@ -25,11 +25,11 @@ public class VotingService {
 		LinkedHashSet<Question> q = this.questionList;
 		return q;
 	}
-	public void setStudentList(LinkedHashSet<Student> students) {
+	public void setStudentList(HashSet<Student> students) {
 		this.studentList = students;
 	}
-	public LinkedHashSet<Student> getStudentList() {
-		LinkedHashSet<Student> students = this.studentList;
+	public HashSet<Student> getStudentList() {
+		HashSet<Student> students = this.studentList;
 		return students;
 	}
 
@@ -80,7 +80,7 @@ public class VotingService {
 	public void printTopTen() {
 		ArrayList<Student> studentArrayList = new ArrayList<Student>(studentList);
 		double maxPoints = 0;
-		
+
 		Collections.sort(studentArrayList, compareByPoints);
 		for (Question q : questionList) {
 			maxPoints += q.getPointValue();
