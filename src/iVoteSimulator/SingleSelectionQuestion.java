@@ -1,7 +1,7 @@
 package iVoteSimulator;
 import java.util.*;
 
-/**V
+/**
  *  Represents a quiz question wherein only one answer may be selected.
  *  @author Anh Hoang
  */

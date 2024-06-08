@@ -11,8 +11,9 @@ public abstract class Question {
 	 * I used HashSets for the options and the solution in order to guarantee uniqueness
 	 * and efficient access to set operations (intersection, difference).
 	 * For the options, I used a LinkedHashSet to easily display them by insertion order.
-	 * As for the choice of double for the point value, it is possible for questions and
-	 * answer weights to yield point tallies that aren't perfect integers.
+	 * As for the choice of using double for the point value, it is possible for questions and
+	 * answer weights to yield point tallies that aren't perfect integers. You will see this
+	 * in the simulation.
 	 */
 	protected String prompt; 				  // Prompt for the question
 	protected LinkedHashSet<String> options;  // Holds answer choices for the question.

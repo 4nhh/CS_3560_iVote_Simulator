@@ -48,7 +48,7 @@ public class MultipleSelectionQuestion extends Question {
 		studentAnswerCopy.removeAll(this.getSolution());  // Difference between student answers and the solution
 		int incorrectAnswers = studentAnswerCopy.size(); 
 	
-		// Calculate the net points earned
+		// Calculate net points
 		double pointsEarned = (correctAnswers*pointsPerAnswer) - (incorrectAnswers*pointsPerAnswer);
 
 		return Math.max(pointsEarned, 0.0); // Student can't earn negative points; min score is 0

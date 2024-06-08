@@ -81,6 +81,7 @@ public class SimulationDriver {
 		students = studentsWithAns;
 	}
 
+	/** Main method for testing the voting service. */
 	public static void main(String[] args) {
 		LinkedHashSet<Question> questions = createQuestions();
 		HashSet<Student> students = generateStudents();

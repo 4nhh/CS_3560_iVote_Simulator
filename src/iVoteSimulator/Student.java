@@ -20,7 +20,7 @@ public class Student {
 	public Student() {
 		submissions = new HashMap<>();
 		/* I use the UUID utility to generate UIDs here because it's known for uniqueness.
-		 * While a collision is theoretically possible, they're highly, highly unlikely.
+		 * While a collision is theoretically possible, the chance is apparently 1 in 2.71 x 10^{18}.
 		 * The UIDs will be displayed in SimulationDriver (via VotingService's printTopTen()),
 		 * though if this were an actual web application, it'd be preferrable to have a
 		 * seperate field for human-readable student names.*/

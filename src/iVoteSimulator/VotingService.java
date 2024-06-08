@@ -33,7 +33,7 @@ public class VotingService {
 		return students;
 	}
 
-	// Processes all questions in the question list and displays the output.
+	/** Function to process all questions and display the output. */
 	public void processQuestions() {
 		int i = 0;
 		for (Question question : questionList) {
@@ -77,6 +77,7 @@ public class VotingService {
 	    }
 	};
 	
+	/** Print the top 10 students in order of descending points. */
 	public void printTopTen() {
 		ArrayList<Student> studentArrayList = new ArrayList<Student>(studentList);
 		double maxPoints = 0;
