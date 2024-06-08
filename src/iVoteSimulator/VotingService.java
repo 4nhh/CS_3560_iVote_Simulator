@@ -95,7 +95,7 @@ public class VotingService {
 		int i = 0;
 		for (Student s : studentArrayList) {
 			System.out.println(String.format("%-4s", studentRank + ".") + s.getUID()
-							   + "  (" + String.format("%.2f", s.getPoints()) + "/" + maxPoints + ")");
+					 + "  (" + String.format("%.2f", s.getPoints()) + "/" + maxPoints + ")");
 			++studentRank;
 			++i;
 			if (i == 10) {
